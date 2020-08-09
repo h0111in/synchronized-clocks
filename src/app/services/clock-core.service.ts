@@ -30,8 +30,8 @@ export class ClockCoreService implements IClockCore {
       const newMinute = newSecond === 0 ? ((this.minuteSubject.value + 1) % 60) : this.minuteSubject.value;
       const newHour = newMinute === 0 ? ((this.hourSubject.value + 1) % 24) : this.hourSubject.value;
       this.setSecond(newSecond);
-      this.setHour(newMinute);
-      this.setMinute(newHour);
+      this.setHour(newHour);
+      this.setMinute(newMinute);
     }, 1000); // set it every one seconds}
   }
 
