@@ -1,0 +1,26 @@
+$clock-color: #26A0DA;
+
+.analog-clock-container {
+  .clock-section {
+    .circle {
+      stroke: $clock-color;
+      stroke-width: 10px;
+      fill: none;
+    }
+
+    .stick {
+      stroke: $clock-color;
+      &.second {
+        stroke-width: 2px;
+      }
+
+      &.minute {
+        stroke-width: 6px;
+      }
+
+      &.hour {
+        stroke-width: 12px;
+      }
+    }
+  }
+}

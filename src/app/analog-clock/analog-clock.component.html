@@ -1,1 +1,22 @@
-<p>analog-clock works!</p>
+<div class="analog-clock-container">
+  <div class="clock-section">
+    <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <line id="second" class="stick second"y1="93" transform="translate(0,7.5)" />
+        <line id="minute" class="stick minute" y1="70" transform="translate(0,7.5)" />
+        <line id="hour" class="stick hour" y1="50" transform="translate(0,7.5)" />
+      </defs>
+
+      <g transform="translate(150,152.5)">
+        <circle r="97.5" class="circle" />
+        <use xlink:href="#hour"   transform="rotate(60)" />
+        <use xlink:href="#minute" transform="rotate(60)" />
+        <use xlink:href="#second"  transform="rotate(0)" />
+      </g>
+
+    </svg>
+  </div>
+  <div class="setting-section">
+    <app-clock-setting></app-clock-setting>
+  </div>
+</div>
