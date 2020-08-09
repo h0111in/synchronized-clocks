@@ -1,1 +1,19 @@
-<p>clock-setting works!</p>
+<div class="clock-setting-container">
+  <div class="hour-setting">
+    <div class="increase button" (click)="onHourIncrease()">+</div>
+    {{hour}}
+    <div class="decrease button" (click)="onHourDecrease()">-</div>
+  </div>
+  <div class="minute-setting">
+
+    <div class="increase button" (click)="onMinuteIncrease()">+</div>
+    {{minute}}
+    <div class="decrease button" (click)="onMinuteDecrease()">-</div>
+  </div>
+  <div class="second-setting">
+
+    <div class="increase button"  (click)="onSecondIncrease()">+</div>
+    {{minute}}
+    <div class="decrease button"  (click)="onSecondDecrease()">-</div>
+  </div>
+</div>
