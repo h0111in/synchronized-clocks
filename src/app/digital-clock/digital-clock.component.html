@@ -1,1 +1,24 @@
-<p>digital-clock works!</p>
+<div class="digital-clock-container">
+  <div class="clock-section">
+
+    <app-sliding-out-box [text]="hour$ | async">
+    </app-sliding-out-box>
+
+    <app-sliding-out-box [text]="minute$ | async">
+    </app-sliding-out-box>
+
+    <app-sliding-out-box [text]="second$ | async">
+    </app-sliding-out-box>
+
+  </div>
+  <div class="setting-section">
+    <app-clock-setting
+    [hour]="hour$ | async"
+    [minute]="minute$ | async"
+    [second]="second$ | async"
+    (hourChanged)="onHourChanged($event)"
+    (minuteChanged)="onMinuteChanged($event)"
+    (secondChanged)="onSecondChanged($event)"
+    ></app-clock-setting>
+  </div>
+</div>

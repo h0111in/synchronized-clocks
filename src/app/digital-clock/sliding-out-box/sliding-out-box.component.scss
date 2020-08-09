@@ -1,0 +1,44 @@
+$color: #26A0DA;
+
+.slide-out-box-container {
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $color;
+
+  .slide {
+    font-size: 34px;
+    font-family: 'Courier New', Courier, monospace;
+
+    &.in {
+      animation-name: in;
+      animation-duration: 1s;
+    }
+
+    &.out {
+      animation-name: out;
+      animation-duration: 1s;
+    }
+  }
+
+  @keyframes in {
+    from {
+      transform: translateY(100px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes out {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(-100px);
+    }
+  }
+}
