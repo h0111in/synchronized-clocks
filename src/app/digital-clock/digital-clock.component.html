@@ -1,17 +1,21 @@
 <div class="digital-clock-container">
-  <div class="clock-section">
+  <div class="clock section">
 
     <app-sliding-out-box [text]="hour$ | async">
     </app-sliding-out-box>
-
+<div class="separator">
+  :
+</div>
     <app-sliding-out-box [text]="minute$ | async">
     </app-sliding-out-box>
-
+    <div class="separator">
+      :
+    </div>
     <app-sliding-out-box [text]="second$ | async">
     </app-sliding-out-box>
 
   </div>
-  <div class="setting-section">
+  <div class="setting section">
     <app-clock-setting
     [hour]="hour$ | async"
     [minute]="minute$ | async"
