@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AnalogClockComponent } from './analog-clock/analog-clock.component';
 import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 import { ClockSettingComponent } from './clock-setting/clock-setting.component';
+import { SlidingOutBoxComponent } from './digital-clock/sliding-out-box/sliding-out-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnalogClockComponent,
     DigitalClockComponent,
-    ClockSettingComponent
+    ClockSettingComponent,
+    SlidingOutBoxComponent
   ],
   imports: [
     BrowserModule,
