@@ -1,25 +1,38 @@
 $clock-color: #26A0DA;
 
 .analog-clock-container {
-  .clock-section {
-    .circle {
-      stroke: $clock-color;
-      stroke-width: 10px;
-      fill: none;
-    }
+  display: grid;
+  grid-template-rows: 400px auto;
+  border: 1px solid $clock-color;
+  margin: 10px;
 
-    .stick {
-      stroke: $clock-color;
-      &.second {
-        stroke-width: 2px;
+  .section {
+    padding: 10px;
+
+    &.clock {
+      display: flex;
+      justify-content: center;
+
+      .circle {
+        stroke: $clock-color;
+        stroke-width: 10px;
+        fill: none;
       }
 
-      &.minute {
-        stroke-width: 6px;
-      }
+      .stick {
+        stroke: $clock-color;
 
-      &.hour {
-        stroke-width: 12px;
+        &.second {
+          stroke-width: 2px;
+        }
+
+        &.minute {
+          stroke-width: 6px;
+        }
+
+        &.hour {
+          stroke-width: 12px;
+        }
       }
     }
   }

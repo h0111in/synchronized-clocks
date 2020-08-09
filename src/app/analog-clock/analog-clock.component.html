@@ -1,6 +1,6 @@
 <div class="analog-clock-container">
-  <div class="clock-section">
-    <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <div class="clock section">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <line id="second" class="stick second"y1="93" transform="translate(0,7.5)" />
         <line id="minute" class="stick minute" y1="70" transform="translate(0,7.5)" />
@@ -16,7 +16,7 @@
 
     </svg>
   </div>
-  <div class="setting-section">
+  <div class="setting section">
     <app-clock-setting
     [hour]="hour$ | async"
     [minute]="minute$ | async"
