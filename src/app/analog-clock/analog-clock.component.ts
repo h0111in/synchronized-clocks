@@ -20,7 +20,7 @@ export class AnalogClockComponent implements OnInit {
   ngOnInit() {
     combineLatest( this.logic.second$,
     this.logic.minute$,
-    this.logic.hour$).subscribe((second, minute, hour) => this.fromTime(second, minute, hour));
+    this.logic.hour$).subscribe(([second, minute, hour]) => this.fromTime(second, minute, hour));
     this.second$ = this.logic.second$;
     this.minute$ = this.logic.minute$;
     this.hour$ = this.logic.hour$;
