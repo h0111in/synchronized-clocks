@@ -21,9 +21,9 @@
     [hour]="hour$ | async"
     [minute]="minute$ | async"
     [second]="second$ | async"
-    hourChanged="onHourChanged($event)"
-    minuteChanged="onMinuteChanged($event)"
-    secondChanged="onSecondChanged($event)"
+    (hourChanged)="onHourChanged($event)"
+    (minuteChanged)="onMinuteChanged($event)"
+    (secondChanged)="onSecondChanged($event)"
     ></app-clock-setting>
   </div>
 </div>

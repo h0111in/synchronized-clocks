@@ -9,6 +9,7 @@ import { combineLatest, Observable } from 'rxjs';
 })
 export class AnalogClockComponent implements OnInit {
 
+  private readonly offset = 180;
   public secondDegree: number;
   public minuteDegree: number;
   public hourDegree: number;
@@ -26,10 +27,10 @@ export class AnalogClockComponent implements OnInit {
     this.hour$ = this.logic.hour$;
   }
 
-  fromTime(second: any, minute: any, hour: any) {
-    this.secondDegree = second * 6;
-    this.minuteDegree =  (minute * 6) + (this.secondDegree / 60);
-    this.hourDegree =  (minute * 6) + (this.minuteDegree / 60);
+  fromTime(second: number, minute: number, hour: number) {
+    this.secondDegree = this.offset + second * 6;
+    this.minuteDegree = this.offset +  (minute * 6) + (this.secondDegree / 60);
+    this.hourDegree = this.offset + ((hour % 12) * 30) + (this.minuteDegree / 60);
   }
 
   /**
