@@ -1,0 +1,25 @@
+$clock-color: #26A0DA;
+
+.digital-clock-container {
+  display: grid;
+  grid-template-rows: 400px auto;
+  border: 1px solid $clock-color;
+  margin: 10px;
+
+  .section {
+    padding: 10px;
+
+    &.clock {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+
+      .separator {
+        color: $clock-color;
+        font-size: 120px;
+      }
+    }
+
+    &.setting {}
+  }
+}

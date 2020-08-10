@@ -53,12 +53,12 @@ export class ClockCoreService implements IClockCore {
 
   }
   setSecond(second: number) {
-    this.secondSubject.next(second);
+    this.secondSubject.next((second < 0 ? second + 60 : second) % 60);
   }
   setMinute(minute: number) {
-    this.minuteSubject.next(minute);
+    this.minuteSubject.next((minute < 0 ? minute + 60 : minute) % 60);
   }
   setHour(hour: number) {
-    this.hourSubject.next(hour);
+    this.hourSubject.next((hour < 0 ? hour + 24 : hour) % 24);
   }
 }

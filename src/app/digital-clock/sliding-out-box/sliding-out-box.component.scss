@@ -1,0 +1,48 @@
+$color: #26A0DA;
+
+.slide-out-box-container {
+  position: relative;
+  overflow: hidden;
+  min-width: 150px;
+  height: 150px;
+  border: 1px solid $color;
+
+  .slide {
+    position: absolute;
+    padding: 9px 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 110px;
+    color: $color;
+    &.in {
+      animation-name: in;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    &.out {
+      animation-name: out;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes in {
+    from {
+      transform: translateY(120px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes out {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(-120px);
+    }
+  }
+}
